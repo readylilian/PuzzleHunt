@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Four</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../media/sheet.png"> 
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="../index.html">
+            <h2><</h2>
+        </a>
+        <h1>Billboard Bolero</h1>
+    </nav>
+    <div class="content">
+        <div>
+            I KEEP SEEING THESE BILLBOARDS EVERYWHERE! I THINK I’M GOING CRAZY!!! THEY MUST MEAN SOMETHING!!!
+        </div>
+        <br>
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+            <img src="../media/puzz4_1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+            <img src="../media/puzz4_2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+            <img src="../media/puzz4_3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../media/puzz4_4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../media/puzz4_5.jpg" style="width:100%">
+            </div>
+            <!-- Next and previous buttons -->
+            <a id="prev" class="prev">&#10094;</a>
+            <a id="next" class="next">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span id="1" class="dot"></span>
+            <span id="2" class="dot"></span>
+            <span id="3" class="dot"></span>
+            <span id="4" class="dot"></span>
+            <span id="5" class="dot"></span>
+        </div>
+        <br>
+        <div> <!--All my homies hate forms-->
+            <label for="final">What do they mean???</label>
+            <input type="text" id="final" name="final">
+            <button id="submit">Submit</button>
+        </div>
+        <p id="results"></p>
+        <p id="past">Previous Answers:</p>
+    </div>
+    <script type="module" src="../src/four.js"></script>
+</body>
+</html>

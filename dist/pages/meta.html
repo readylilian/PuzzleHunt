@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <title>Metapuzzle</title>
+    <link rel="shortcut icon" href="../media/sheet.png"> 
+</head>
+<body id="body">
+    <nav>
+        <a href="../index.html">
+            <h2><</h2>
+        </a>
+        <h1>The Final Puzzle</h1>
+    </nav>
+    <div class="content">
+        <section id="staff">
+
+        </section>
+        <section id="input">
+            <div class="notes">
+                <p id="lines">
+                    Lines
+                    <div class="noteoptn">
+                        <button id="e4">E</button>
+                        <button id="g4">G</button>
+                        <button id="b4">B</button>
+                        <button id="d5">D</button>
+                        <button id="f5">F</button>
+                    </div>
+                </p>
+                
+                <p id="spaces">
+                    Spaces
+                    <div class="noteoptn">
+                        <button id="f4">F</button>
+                        <button id="a4">A</button>
+                        <button id="c5">C</button>
+                        <button id="e5">E</button>
+                    </div>
+                </p>
+            </div>
+            <button id="play">Play</button>
+            <button id="clear">Clear Input</button>
+            <!--<button onclick="check()">Check Guess</button>-->
+            <br><br>
+            <div> <!--All my homies hate forms-->
+                <label for="metaFinal">What song am I?</label>
+                <input type="text" id="metaFinal" name="metaFinal">
+                <button id="metaSubmit">Submit</button>
+            </div>
+            <p id="results"></p>
+            <p id="past">Previous Answers:</p>
+        </section>
+    </div>
+    <script type="module" src="../src/meta.js"></script>
+</body>
+</html>

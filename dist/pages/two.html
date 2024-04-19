@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <title>Puzzle Two</title>
+    <link rel="shortcut icon" href="../media/sheet.png"> 
+</head>
+<body>
+    <nav>
+        <a href="../index.html">
+            <h2><</h2>
+        </a>
+        <h1>Music Room Rumba</h1>
+    </nav>
+    <div class="content">
+        <p>
+            Hey! Can you help us out? We are trying to rearrange our music room to increase the quality of music that people will hear throughout, but there are certain rules and regulations that we have to follow in doing so. 
+        </p>
+        <div id="puzz2">
+            <div id="satogaeri">
+                <div>
+                    <p>
+                        First (in the blue puzzle), we need you to move each of the chairs (circle with a number in it) to a different region of the room such that no two chairs are in the same region. But there is a catch, Each chair can only be moved the amount that is specified on it!
+                    </p>
+                </div>
+                <img src="../media/puzz2_1.jpg" width="100%">
+            </div>
+            <div id="akari">
+                <div>
+                    <p>Once you are done with that, we need your help placing speakers around the room as well if you are up for it! We need the sound to cover the entire floor, but the problem is we only have speakers that project sound orthogonally (left, right, up, down) from where they are placed… Oh! Also, of course no speakers can be in a direct line of sight of each other orthogonally because who wants music that overlaps! Ew! The final thing is that the department picked out specific central walls (designated with a number on them), where they want the number of speakers neighboring that wall (orthogonally) to be exactly the number written on it - don’t ask me why, I’m just here to get paid - but all other spots are fair game.
+                    </p>
+                </div>
+                <img src="../media/puzz2_2.jpg" width="100%">
+            </div>
+            <div id="fillin">
+                <div>
+                    <p>
+                        Wow! Thanks for all the help moving stuff around, you must be wiped out after all of that! Why don’t you sit down in one of the chairs you placed, listen to the music from the speakers, and work on this music themed worksheet I had planned to give out as an activity today! For this you just need to fit all the words from the right onto the grid such that there are no empty spaces. Words can (and will) overlap! Each word must start on its designated space and continue onto the space in the direction denoted for it, and all subsequent letters must neighbor the previous letter orthogonally. 
+                    </p>
+                </div>
+                <div id="cluesim">
+                    <img src="../media/puzz2_3_1.jpg" width="100%">
+                </div>
+                <img src="../media/puzz2_3_2.jpg" width="100%">
+            </div>
+        </div>
+        <div> <!--All my homies hate forms-->
+            <label for="final">Solution?</label>
+            <input type="text" id="final" name="final">
+            <button id="submit">Submit</button>
+        </div>
+        <p id="results"></p>
+        <p id="past">Previous Answers:</p>
+    </div>
+    <script type="module" src="../src/two.js"></script>
+</body>
+</html>

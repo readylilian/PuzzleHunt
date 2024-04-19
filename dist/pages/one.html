@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <title>Puzzle One</title>
+    <link rel="shortcut icon" href="../media/sheet.png"> 
+</head>
+<body>
+    <nav>
+        <a href="../index.html">
+            <h2><</h2>
+        </a>
+        <h1>Secret Sounds</h1>
+    </nav>
+    <div class="content">
+        <div>
+            Help! My long time nemesis keeps sending me stupid encoded messages.<br> 
+            I can’t figure this one out and I certainly can’t let them know that. <br>
+            I know that it should be 14 letters, but I only have this file:
+        </div>
+        <br>
+        <div id="audio">
+            <audio controls src="../media/transmission.wav"></audio>
+            <a id="download" href="../media/transmission.wav" download="transmission.wav">
+                <button class="btn"><i class="fa fa-download"></i></button>
+            </a>
+        </div>
+        <br>
+        <div> <!--All my homies hate forms-->
+            <label for="final">What are they trying to say?</label>
+            <input type="text" id="final" name="final">
+            <button id="submit">Submit</button>
+        </div>
+        <p id="results"></p>
+        <p id="past">Previous Answers:</p>
+    </div>
+
+    <script type="module" src="../src/one.js"></script>
+</body>
+</html>
