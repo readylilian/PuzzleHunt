@@ -1,13 +1,16 @@
-const { Renderer, Stave, StaveNote, Formatter, Voice, Beam } = Vex.Flow;
+import * as Tone from 'tone';
+var axios = require('axios');
+import { Renderer, Stave, StaveNote, Formatter, Beam } from 'vexflow';
+
 // Create an SVG renderer and attach it to the DIV element named "boo".
 //const {Synth} = Tone;
 const div = document.getElementById("staff");
 const body = document.getElementById("body");
 const synth = new Tone.Synth().toDestination();
 //const now = Tone.now()
-
 let renderer;
 let context;
+let results;
 
 let noteCount = 1;
 let notes1 = [];
@@ -79,7 +82,6 @@ const clear = () =>
     ];
 }
 
-
 const onLoad = () => 
 {
     clear();
@@ -97,6 +99,8 @@ const onLoad = () =>
     document.getElementById("e5").onclick = () => {sendNote("e/5")};
     document.getElementById("play").onclick = () => {play()};
     document.getElementById("clear").onclick = () => {onLoad()};
+    document.getElementById("metaSubmit").onclick = () => {sendAnswer(document.getElementById("metaFinal").value);};
+    results = document.getElementById("results");
     setupStaff();
 }
 
@@ -227,3 +231,37 @@ const play = () =>
 }
 
 onLoad();
+
+const METAURL = "https://us-east-1.aws.data.mongodb-api.com/app/data-adqvx/endpoint/meta";
+
+const answerLoaded = (e) =>
+{
+    let xhr = e.target;
+    let obj = JSON.parse(xhr.responseText);
+    //8 if no response print and return
+    console.log(obj);
+    if(obj.length != 0)
+    {
+        results.innerHTML = "Correct!";
+    }
+    else
+    {
+        results.innerHTML = "Incorrect, please try again, and remember to use the full name of the song.";
+    }
+}
+
+const sendAnswer = (val) =>
+{
+    let xhr = new XMLHttpRequest();
+    //2 set onload handler
+    xhr.onload = answerLoaded;
+    //3 set onerror handler
+    xhr.onerror = () => {console.log(`An error occurred`);};
+    //4 get open and sent request
+    results.innerHTML = "Checking answer..."
+    console.log("Sending put request");
+    document.getElementById("past").innerHTML += `<br><br>${val}`;
+    xhr.open(`PUT`, `${METAURL}`);
+    xhr.send(val);
+
+}

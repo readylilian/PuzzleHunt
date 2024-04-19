@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Metapuzzle</title>
 </head>
@@ -39,14 +37,14 @@
         <button id="clear">Clear Input</button>
         <!--<button onclick="check()">Check Guess</button>-->
         <br><br>
-        <form>
+        <div> <!--All my homies hate forms-->
             <label for="metaFinal">What song am I?</label>
             <input type="text" id="metaFinal" name="metaFinal">
             <button id="metaSubmit">Submit</button>
-        </form>
+        </div>
         <p id="results"></p>
+        <p id="past">Previous Answers:</p>
     </section>
-    <script type="module" src="./node_modules/tone/build/Tone.js"></script>
-    <script type="module" src="./js/meta.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
