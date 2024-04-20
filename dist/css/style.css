@@ -148,3 +148,15 @@ nav
 {
   margin-top: 20px;
 }
+
+.fiveim
+{
+  display: grid;
+  grid-template-areas: "item" "image";
+  grid-template-columns: auto 45%;
+  max-height:300px;
+}
+.fiveim>img
+{
+  max-height: 300px;
+}
